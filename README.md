@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Animals
 
-## Getting Started
+Una aplicación para conocer animales.
 
-First, run the development server:
+## Descripción
+
+Este proyecto es una aplicación web que permite a los usuarios autenticarse y realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una lista de animales. Cada animal tiene un nombre, una especie y una foto asociada.
+
+## Funcionalidades
+
+- **Autenticación de Usuario:** Los usuarios pueden registrarse e iniciar sesión en la aplicación.
+- **Operaciones CRUD de Animales:** Los usuarios pueden crear, leer, actualizar y eliminar animales de la base de datos.
+- **Gestión de Especies:** Cada animal está asociado a una especie, y los usuarios pueden gestionar la lista de especies disponibles.
+
+## Librerías Utilizadas
+
+- **@clerk/nextjs:** Para la autenticación de usuarios.
+- **@shadcn** Componentes de interfaz de usuario.
+- **@uploadthing/react, uploadthing:** Para la gestión de cargas de archivos.
+- **mongodb, mongoose:** Para interactuar con la base de datos MongoDB.
+- **next, react, react-dom:** Para la construcción de la interfaz de usuario.
+- **tailwind-merge, tailwindcss-animate:** Utilidades para estilos con Tailwind CSS.
+
+## Requisitos de Instalación
+
+Asegúrate de tener Node.js y npm instalados en tu máquina.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clona el repositorio
+git clone https://github.com/josecentenodev/animals.git
+
+# Entra al directorio del proyecto
+cd tu-proyecto
+
+# Instala las dependencias
+npm install
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuración
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Antes de ejecutar la aplicación, necesitarás configurar algunas variables de entorno. Crea un archivo .env en la raíz del proyecto y completa las siguientes variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
 
-## Learn More
+# Variables de entorno
 
-To learn more about Next.js, take a look at the following resources:
+CLERK_SECRET_KEY=your-clerk-secret-key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+MONGODB_URI=your-mongodb-uri
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Clerk
 
-## Deploy on Vercel
+Habilitar webhooks y deployar la app, luego configurar correctamente en clerk la url de deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Uso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash 
+# Inicia la aplicación en modo desarrollo
+npm run dev
+
+```
+
+Abre http://localhost:3000 en tu navegador para ver la aplicación.
