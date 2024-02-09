@@ -2,9 +2,6 @@ import AnimalForm from "@/components/shared/AnimalForm";
 import { auth } from '@clerk/nextjs'
 
 const CreateAnimal = () => {
-    const { sessionClaims } = auth()
-
-    const userId = sessionClaims?.userId as string;
 
     return (
         <>
@@ -13,7 +10,7 @@ const CreateAnimal = () => {
             </section>
 
             <div className="wrapper my-8">
-                <AnimalForm userId={userId} type="Create" />
+                <AnimalForm type="Create" />
             </div>
         </>
     )

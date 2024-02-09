@@ -52,12 +52,18 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-
+WEBHOOK_SECRET=your-clerk-webhook-secret
+UPLOADTHING_SECRET=your-uploadthing-secret
+UPLOADTHING_APP_ID=your-uploadthing-app-id
 ```
 
 ## Clerk
 
 Habilitar webhooks y deployar la app, luego configurar correctamente en clerk la url de deploy
+
+## Uploadthing
+
+Crear aplicacion y obtener las credenciales, tambien seguir la documentacion para el middleware.
 
 ## Uso
 

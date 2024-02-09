@@ -10,7 +10,6 @@ type UpdateEventProps = {
 const UpdateEvent = async ({ params: { id } }: UpdateEventProps) => {
 
   const animal = await getAnimalById(id)
-  console.log(animal)
 
   return (
     <>
